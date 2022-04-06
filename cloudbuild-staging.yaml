@@ -1,0 +1,6 @@
+steps:
+- name: us.gcr.io/dev-review-env/helm
+  entrypoint: 'sh'
+  args:
+    - '-c'
+    - helm install selenium-grid --set firefoxNode.enabled=false,edgeNode.enabled=false --namespace default docker-selenium/chart/selenium-grid/.

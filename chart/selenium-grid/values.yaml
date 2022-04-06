@@ -264,9 +264,9 @@ chromeNode:
   resources:
     requests:
       memory: "1Gi"
-      cpu: "1"
+      cpu: "500m"
     limits:
-      memory: "1Gi"
+      memory: "2Gi"
       cpu: "1"
   # Tolerations for chrome-node container
   tolerations: []
