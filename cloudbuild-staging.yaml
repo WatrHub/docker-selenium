@@ -1,6 +1,17 @@
 steps:
+- name: gcr.io/cloud-builders/kubectl
+  args:
+  - cluster-info
+  env:
+  - CLOUDSDK_COMPUTE_REGION=us-central1-c
+  - CLOUDSDK_CONTAINER_CLUSTER=review-cluster
+  - KUBECONFIG=/workspace/.kube/config
 - name: us.gcr.io/dev-review-env/helm
   entrypoint: 'sh'
   args:
     - '-c'
     - helm install selenium-grid --set firefoxNode.enabled=false,edgeNode.enabled=false --namespace default docker-selenium/chart/selenium-grid/.
+  env:
+    - HELM_EXPERIMENTAL_OCI=1
+    - KUBECONFIG=/workspace/.kube/config
+    - TILLERLESS=true
