@@ -274,6 +274,10 @@ chromeNode:
   nodeSelector: {}
   # Custom environment variables for chrome nodes
   extraEnvironmentVariables:
+    - name: SE_NODE_MAX_SESSIONS
+      value: 5
+    - name: SE_NODE_OVERRIDE_MAX_SESSIONS
+      value: true
     # - name: JAVA_OPTS
     #   value: "-Xmx512m"
     # - name:
