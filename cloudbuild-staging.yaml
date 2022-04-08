@@ -10,7 +10,7 @@ steps:
   entrypoint: 'sh'
   args:
     - '-c'
-    - helm install upgrade selenium-grid --set firefoxNode.enabled=false,edgeNode.enabled=false --namespace default chart/selenium-grid/.
+    - helm upgrade --install selenium-grid --set firefoxNode.enabled=false,edgeNode.enabled=false --namespace default chart/selenium-grid/.
   env:
     - HELM_EXPERIMENTAL_OCI=1
     - KUBECONFIG=/workspace/.kube/config
