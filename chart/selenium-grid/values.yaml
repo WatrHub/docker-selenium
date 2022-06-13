@@ -242,7 +242,7 @@ chromeNode:
   # Enable chrome nodes
   enabled: true
   # Number of chrome nodes
-  replicas: 1
+  replicas: 10
   # Image of chrome nodes
   imageName: selenium/node-chrome
   # Image of chrome nodes (this overwrites global.seleniumGrid.nodesImageTag)
@@ -263,11 +263,11 @@ chromeNode:
   # Resources for chrome-node container
   resources:
     requests:
-      memory: "1Gi"
-      cpu: "1"
+      memory: "350Mi"
+      cpu: "10m"
     limits:
-      memory: "1Gi"
-      cpu: "1"
+      memory: "350Mi"
+      cpu: "10m"
   # Tolerations for chrome-node container
   tolerations: []
   # Node selector for chrome-node container
