@@ -264,9 +264,9 @@ chromeNode:
   resources:
     requests:
       memory: "1Gi"
-      cpu: "500m"
+      cpu: "1"
     limits:
-      memory: "2Gi"
+      memory: "1Gi"
       cpu: "1"
   # Tolerations for chrome-node container
   tolerations: []
@@ -275,7 +275,7 @@ chromeNode:
   # Custom environment variables for chrome nodes
   extraEnvironmentVariables:
     - name: SE_NODE_MAX_SESSIONS
-      value: "5"
+      value: "1"
     - name: SE_NODE_OVERRIDE_MAX_SESSIONS
       value: "true"
     # - name: JAVA_OPTS
