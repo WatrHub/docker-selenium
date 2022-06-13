@@ -263,11 +263,11 @@ chromeNode:
   # Resources for chrome-node container
   resources:
     requests:
-      memory: "350Mi"
-      cpu: "150m"
+      memory: "512Mi"
+      cpu: "250m"
     limits:
-      memory: "350Mi"
-      cpu: "150m"
+      memory: "512Mi"
+      cpu: "250m"
   # Tolerations for chrome-node container
   tolerations: []
   # Node selector for chrome-node container
