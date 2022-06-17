@@ -242,7 +242,7 @@ chromeNode:
   # Enable chrome nodes
   enabled: true
   # Number of chrome nodes
-  replicas: 10
+  replicas: 1
   # Image of chrome nodes
   imageName: selenium/node-chrome
   # Image of chrome nodes (this overwrites global.seleniumGrid.nodesImageTag)
@@ -263,11 +263,11 @@ chromeNode:
   # Resources for chrome-node container
   resources:
     requests:
-      memory: "512Mi"
-      cpu: "250m"
+      memory: "5120Mi"
+      cpu: "2500m"
     limits:
-      memory: "512Mi"
-      cpu: "250m"
+      memory: "5120Mi"
+      cpu: "2500m"
   # Tolerations for chrome-node container
   tolerations: []
   # Node selector for chrome-node container
@@ -275,7 +275,7 @@ chromeNode:
   # Custom environment variables for chrome nodes
   extraEnvironmentVariables:
     - name: SE_NODE_MAX_SESSIONS
-      value: "1"
+      value: "20"
     - name: SE_NODE_OVERRIDE_MAX_SESSIONS
       value: "true"
     # - name: JAVA_OPTS
